@@ -1,28 +1,33 @@
-show tables
-
-create table users (
+create table supplier (
 	id int,
-	name varchar(255),
-	lastname varchar(255),
-	username varchar (20),
-	pass varchar(100),
-	tipDoc char(5),
-	nroDoc varchar(20),
+	companyname varchar(255),
+	contactname varchar(255),
+	companyphone varchar (20),
+	product varchar(100),
+	city varchar(100),
+	country varchar(100),
 	enable int
 )
 
-alter table users add primary key (id);
+alter table supplier add primary key (id);
 
-ALTER TABLE ep1.users MODIFY COLUMN id int auto_increment NOT NULL;
+ALTER TABLE supplier MODIFY COLUMN id int auto_increment NOT NULL;
 
-INSERT INTO USERS (name,lastname,username,pass,tipDoc,nroDoc,enable)
-VALUES ('Jose','Zuniga','DNI73267572','123456','DNI','73267572',1);
+INSERT INTO supplier (companyname,contactname,companyphone,product,city,country,enable)
+VALUES ('Frutas Gutierrez','Antonio Gutierrez','607454545','pera','Sao Paulo','Brasil',1);
 
-INSERT INTO USERS (name,lastname,username,pass,tipDoc,nroDoc,enable)
-VALUES ('Maria','Santillan','DNI46299021','123456','DNI','46299021',1);
+INSERT INTO supplier (companyname,contactname,companyphone,product,city,country,enable)
+VALUES ('Hortalizas del sur','Guillermo Morales','652854874','manzana','Santiago','Chile',1);
 
-update users set name='Mariana' where username='DNI46299021';
+INSERT INTO supplier (companyname,contactname,companyphone,product,city,country,enable)
+VALUES ('Azucarera Sevillana','Rodrigo Mendez','622525885','azucar','Sevilla','España',1);
 
-delete from users where username='DNI73267572';
+INSERT INTO supplier (companyname,contactname,companyphone,product,city,country,enable)
+VALUES ('Huevos Puebla','Araceli Arnedo','652879137','huevo','Puebla','Mexico',1);
 
-select * from users
+INSERT INTO supplier (companyname,contactname,companyphone,product,city,country,enable)
+VALUES ('Arroces La Cigala','Maria Alvarez','677889924','arroz','Trujillo','Peru',1);
+
+
+
+select * from supplier
