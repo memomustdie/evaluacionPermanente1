@@ -31,3 +31,18 @@ VALUES ('Arroces La Cigala','Maria Alvarez','677889924','arroz','Trujillo','Peru
 
 
 select * from supplier
+
+create procedure deletesupplier (in p_id INT)
+begin
+	delete from supplier where id = p_id;
+end
+
+create procedure listarAllSupp ()
+begin
+	select * from supplier ;
+end
+
+/*probando su funcionamiento*/
+call deletesupplier(1) ;
+
+call listarAllSupp()
